@@ -30,8 +30,6 @@ public class main {
         get("/all", "application/json", (req, res) -> movies, gson::toJson);
 
 
-        //  get("/all", "application/json", (req, res) -> new MyMessage("Hello World"), gson::toJson);
-
     }
 
 }
