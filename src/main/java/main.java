@@ -27,7 +27,7 @@ public class main {
 
         Gson gson = new Gson();
 
-        get("/all", "application/json", (req, res) -> movies, gson::toJson);
+        get("/movies", "application/json", (req, res) -> movies, gson::toJson);
 
 
     }
