@@ -83,5 +83,4 @@ fabric.properties
 .gitignore
 .idea/vcs.xml
 kodiapi.iml
-src/main/resources/
 src/test/
