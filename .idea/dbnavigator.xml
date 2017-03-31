@@ -31,7 +31,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="f223f087-4fad-4e85-bfca-fa44c4fe5a91">
-      <console name="MySQL" type="STANDARD"><![CDATA[select c00, c03 from movie]]></console>
+      <console name="MySQL" type="STANDARD"><![CDATA[select idMovie, c00,c01, c19 , c14 , c15, c20, c08 premiered from movie]]></console>
       <console name="MySQL 1" type="STANDARD"><![CDATA[select * from movie]]></console>
     </connection>
   </component>
