@@ -49,6 +49,8 @@ public class Application implements SparkApplication {
         List<Movie> finalMovies = movies;
         get("/movies", "application/json", (req, res) -> finalMovies, gson::toJson);
 
+        get("/", (req,res)-> "Kodi API root");
+
     }
 }
 
