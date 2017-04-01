@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="f223f087-4fad-4e85-bfca-fa44c4fe5a91">
-        <schema name="MyVideos107" object-types="column, function, table, view" />
+        <schema name="MyVideos107" object-types="function, table, view" />
       </connection>
     </loaded-nodes>
   </component>
