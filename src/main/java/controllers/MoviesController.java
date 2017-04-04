@@ -43,4 +43,26 @@ public class MoviesController {
         return movies;
     }
 
+    public Object getAllDataFromAllMovies(){
+
+    }
+
+    public Movie getMoviebyId(){
+
+    }
+
 }
+/*
+EJEMPLO QUERY RAW
+
+      String query = "SELECT ifnull(b.bonific, 0) AS bonif, a.codigo, a.descripcion, a.emp, a.existencia, a.factor, a.grupo, " +
+                                "a.iva, a.medida1, a.medida2,a.preneto, a.tipo_precio, a.uventa, a.peso FROM producto AS a LEFT JOIN bonificacion AS b ON a.grupo = b.grupo" +
+                                " AND b.cliente = \"" + cliente + "\" WHERE a.grupo = \"" + d + "\"";
+
+
+  GenericRawResults<Producto> rawResults = daoproducto.queryRaw(query, daoproducto.getRawRowMapper());
+            List<Producto> productosdblocal = rawResults.getResults();
+
+
+
+ */

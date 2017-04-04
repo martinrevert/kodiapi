@@ -1,11 +1,13 @@
 package models;
 
-import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.table.DatabaseTable;
 
 /**
  * Created by martin on 30/03/17.
  */
+
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
 @DatabaseTable(tableName = "movie")
 public class Movie {
 
@@ -21,8 +23,6 @@ public class Movie {
     private String c14;
     @DatabaseField
     private String c15;
-    @DatabaseField
-    private String c20;
     @DatabaseField
     private String c08;
 
@@ -77,14 +77,6 @@ public class Movie {
 
     public void setC15(String c15) {
         this.c15 = c15;
-    }
-
-    public String getC20() {
-        return c20;
-    }
-
-    public void setC20(String c20) {
-        this.c20 = c20;
     }
 
     public String getC08() {
