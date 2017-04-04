@@ -16,14 +16,6 @@ public class Movie {
     @DatabaseField
     private String c00;
     @DatabaseField
-    private String c01;
-    @DatabaseField
-    private String c19;
-    @DatabaseField
-    private String c14;
-    @DatabaseField
-    private String c15;
-    @DatabaseField
     private String c08;
 
 
@@ -45,38 +37,6 @@ public class Movie {
 
     public void setIdMovie(int idMovie) {
         this.idMovie = idMovie;
-    }
-
-    public String getC01() {
-        return c01;
-    }
-
-    public void setC01(String c01) {
-        this.c01 = c01;
-    }
-
-    public String getC19() {
-        return c19;
-    }
-
-    public void setC19(String c19) {
-        this.c19 = c19;
-    }
-
-    public String getC14() {
-        return c14;
-    }
-
-    public void setC14(String c14) {
-        this.c14 = c14;
-    }
-
-    public String getC15() {
-        return c15;
-    }
-
-    public void setC15(String c15) {
-        this.c15 = c15;
     }
 
     public String getC08() {
