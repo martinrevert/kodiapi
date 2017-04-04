@@ -44,11 +44,11 @@ public class MoviesController {
     }
 
     public Object getAllDataFromAllMovies(){
-
+    return null;
     }
 
     public Movie getMoviebyId(){
-
+    return null;
     }
 
 }
