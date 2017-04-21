@@ -23,7 +23,7 @@ public class Application implements SparkApplication {
 
         get("/movies", "application/json", (req, res) -> moviescontroller.getAllMovies(), gson::toJson);
 
-        get("/movies/:id", "application/json", (req,res) -> moviescontroller.getMoviebyId(), gson::toJson);
+        get("/movies/:id", "application/json", (req,res) -> moviescontroller.getMoviebyId(req.params(":id")), gson::toJson);
 
     }
 }

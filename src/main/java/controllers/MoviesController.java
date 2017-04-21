@@ -47,7 +47,7 @@ public class MoviesController {
     return null;
     }
 
-    public Movie getMoviebyId(){
+    public Movie getMoviebyId(String params){
     return null;
     }
 
