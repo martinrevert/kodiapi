@@ -2,9 +2,11 @@ package controllers;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
+import com.j256.ormlite.dao.GenericRawResults;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import models.Movie;
+import models.MovieDetails;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -39,30 +41,49 @@ public class MoviesController {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        //Todo paginar (offset?)
         return movies;
     }
 
-    public Object getAllDataFromAllMovies(){
-    return null;
-    }
+    public MovieDetails getMoviebyId(String id) {
 
-    public Movie getMoviebyId(String params){
-    return null;
+        ConnectionSource connectionSource = null;
+        try {
+            connectionSource = new JdbcConnectionSource(DATABASE_URL);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        String query = "SELECT a.idMovie, a.c00, a.c08, b.uniqueid_value FROM movie AS a " +
+                "LEFT JOIN movie_view AS b " +
+                "ON a.idMovie = b.idMovie " +
+                "WHERE a.idMovie = \"" + id + "\"";
+
+        MovieDetails movie = null;
+        Dao<MovieDetails, ?> daoMovieDetails = null;
+        try {
+            assert connectionSource != null;
+            daoMovieDetails = DaoManager.createDao(connectionSource, MovieDetails.class);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        GenericRawResults<MovieDetails> rawResults = null;
+        try {
+            if (daoMovieDetails != null) {
+                rawResults = daoMovieDetails.queryRaw(query, daoMovieDetails.getRawRowMapper());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            if (rawResults != null) {
+                movie = rawResults.getFirstResult();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return movie;
     }
 
 }
-/*
-EJEMPLO QUERY RAW
-
-      String query = "SELECT ifnull(b.bonific, 0) AS bonif, a.codigo, a.descripcion, a.emp, a.existencia, a.factor, a.grupo, " +
-                                "a.iva, a.medida1, a.medida2,a.preneto, a.tipo_precio, a.uventa, a.peso FROM producto AS a LEFT JOIN bonificacion AS b ON a.grupo = b.grupo" +
-                                " AND b.cliente = \"" + cliente + "\" WHERE a.grupo = \"" + d + "\"";
-
-
-  GenericRawResults<Producto> rawResults = daoproducto.queryRaw(query, daoproducto.getRawRowMapper());
-            List<Producto> productosdblocal = rawResults.getResults();
-
-
-
- */
