@@ -54,7 +54,7 @@ public class MoviesController {
             e.printStackTrace();
         }
 
-        String query = "SELECT a.idMovie, a.c00, a.c08, b.uniqueid_value FROM movie AS a " +
+        String query = "SELECT a.idMovie, a.c00,a.c01,a.c03, a.c06, a.c08, a.c14, a.c15, a.c18, a.c19, a.c20, a.c21, a.premiered, b.rating, b.votes, b.uniqueid_value FROM movie AS a " +
                 "LEFT JOIN movie_view AS b " +
                 "ON a.idMovie = b.idMovie " +
                 "WHERE a.idMovie = \"" + id + "\"";
