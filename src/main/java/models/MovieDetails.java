@@ -6,7 +6,7 @@ import com.j256.ormlite.table.DatabaseTable;
 /**
  * Created by martin on 21/04/17.
  */
-@DatabaseTable(tableName = "movie")
+@DatabaseTable(tableName = "moviedetails")
 
 public class MovieDetails {
 
@@ -42,11 +42,6 @@ public class MovieDetails {
     private String c21;
     @DatabaseField //fanart
     private String c20;
-
-
-
-
-
 
 
     MovieDetails(){
