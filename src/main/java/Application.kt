@@ -20,9 +20,9 @@ class Application : SparkApplication {
 
         get("/") { req, res -> "Kodi API root" }
 
-        get("/movies", "application/json", { req, res -> moviescontroller.allMovies}, gson::toJson)
+        get("/movies", "application/json", { req, res -> moviescontroller.allMovies }, gson::toJson)
 
-        get("/movies/:id", "application/json", { req, res -> moviescontroller.getMoviebyId(req.params(":id"))}, gson::toJson)
+        get("/movies/:id", "application/json", { req, res -> moviescontroller.getMoviebyId(req.params(":id")) }, gson::toJson)
     }
 }
 
