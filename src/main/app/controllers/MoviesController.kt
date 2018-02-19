@@ -90,7 +90,7 @@ class MoviesController {
     companion object {
 
 
-        private val DATABASE_URL = "jdbc:mysql://192.168.1.124:3306/MyVideos107?user=kodi&password=kodi&useSSL=false\n"
+        private val DATABASE_URL = "jdbc:mysql://192.168.1.124:3306/MyVideos109?user=kodi&password=kodi&useSSL=false\n"
     }
 
 }

@@ -9,7 +9,7 @@
     <packaging>war</packaging>
 
     <properties>
-        <kotlin.version>1.1.2-4</kotlin.version>
+        <kotlin.version>1.2.21</kotlin.version>
     </properties>
 
 
@@ -112,7 +112,7 @@
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib-jre8</artifactId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
             <version>${kotlin.version}</version>
         </dependency>
         <dependency>
@@ -120,6 +120,12 @@
             <artifactId>kotlin-test</artifactId>
             <version>${kotlin.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <!-- jsoup HTML parser library @ https://jsoup.org/ -->
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.11.2</version>
         </dependency>
     </dependencies>
 </project>
